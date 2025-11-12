@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .btn-parent{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+        button{
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: rgba(72, 72, 72, 0.685);
+            color: white;
+            box-shadow: 2px 2px 10px  rgba(184, 184, 184, 0.774);
+            cursor: pointer;
+        }
+        .overlay{
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            /* display: flex;   */
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        .popup{
+            height: 50%;
+            width: 50%;
+            background-color: rgba(191, 190, 190, 0.685);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 5px 5px 4px rgb(79, 78, 78);
+        }
+        input{
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <h2>email</h2>
+            <input type="text" placeholder="mail@example.com"> 
+            <button>search</button>
+            <button id="close-popup">X</button>
+        </div>
+    </div>
+
+
+    <div class="btn-parent">
+    <button id="open-popup">Open Pop-up</button>
+    </div>
+    
+
+</body>
+<script src="./script.js"></script>
+</html>

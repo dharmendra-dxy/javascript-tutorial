@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            background-color: black;
+            width: 100%;
+            padding: 20px 5%;
+            color: white;
+            position: fixed;
+            top: 0px;
+            transition: 0.5s;
+        }
+        header ul{
+            display: flex;
+            list-style: none;
+            font-size: 20px;
+            gap: 40px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        header ul li:hover{
+            cursor: pointer;
+            color: red;
+        }
+        .btn{
+            padding: 10px 20px;
+            background-color: white;
+        }
+        .section{
+            width: 100%;
+            height: 600px;
+            font-size: 100px;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 20px;
+        }
+        .section-1{
+            background-color: rgb(97, 96, 96);
+            margin-top: 77px;
+        }
+        .section-2{
+            background-color: rgb(142, 141, 141);
+        }
+        .section-3{
+            background-color: rgb(169, 168, 168);
+        }
+        .section-4{
+            background-color: rgb(207, 206, 206);
+        }
+    </style>
+</head>
+<body>
+    
+    <header id="header">
+
+        <ul>
+            <li id="section-1-link" onclick="scrollToSection('section-1')">Section 1</li>
+            <li id="section-2-link" onclick="scrollToSection('section-2')">Section 2</li>
+            <li id="section-3-link" onclick="scrollToSection('section-3')">Section 3</li>
+            <li id="section-4-link" onclick="scrollToSection('section-4')">Section 4</li>
+            <li><button class="btn" id="btn"> Location </button></li>
+            <li><button class="btn" id="custom-btn"> Custom scroll </button></li>
+        </ul>
+
+    </header>
+
+
+    <div class="section-1 section" id="section-1">section-1</div>
+    <div class="section-2 section" id="section-2">section-2</div>
+    <div class="section-3 section" id="section-3">section-3</div>
+    <div class="section-4 section" id="section-4">section-4</div>
+
+    
+
+</body>
+<script src="./script.js"></script>
+</html>

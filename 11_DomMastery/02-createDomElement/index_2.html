@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular';
+        }
+        .parent{
+            height: 200px;
+            width: 100%;
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="parent" id="parent">
+
+        <!-- ADD A "h1" TAG HERE  -->
+
+    </div>
+
+</body>
+<script>
+
+    const parent = document.getElementById("parent");
+
+    const heading = document.createElement("h1");
+    heading.innerText = "Hello";
+
+    parent.appendChild(heading);
+
+    // Alternate way:
+    
+    // parent.innerHTML = "<h1> Heading </h1>"
+
+    // Q: Why don't we use innerHTML method insted of creating elements?
+    // A: innerHTML is not prefered because it's a slower process.
+
+</script>
+</html>
