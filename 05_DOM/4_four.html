@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM  | ChaiAUrCode</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: white;
+    }
+</style>
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement("li")
+        li.innerHTML = `${langName}`
+
+        // adding li to ul
+         document.querySelector(".language").appendChild(li)
+    }
+
+    // Alternate way: Optimized way
+    
+    function addOptiLang(langName) {
+        const li = document.createElement("li")
+        const addText = document.createTextNode(langName)
+        li.appendChild(addText)
+        document.querySelector(".language").appendChild(li)
+    }
+
+    addLanguage("Python")
+    addOptiLang("TypeScript")
+
+    // Changing 2nd language (Python) :
+
+    const Lang2 = document.querySelector("li:nth-child(2)")
+    //Lang2.innerHTML = "Python-Changed"     ... not optimized
+    // alternate way:
+    const li2 = document.createElement("li")
+    li2.textContent = "Pyhton-Changed"
+    Lang2.replaceWith(li2)
+
+    // Removing Li item:
+
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+
+    
+    
+</script>
+
+</html>

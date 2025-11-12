@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG color changer</title>
+</head>
+<style>
+    
+    .card-item{
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .card{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+    .grey{background-color: grey;}
+    .green{background-color: green;}
+    .blue{background-color: blue;}
+    .yellow{background-color: yellow;}
+    .white{background-color: white;}
+
+    .heading{
+        display: flex;
+        justify-content: center;
+    }
+    
+</style>
+<body>
+    <div>
+        <h1 class="heading"><p class="text-centre">BG COLOR CHANGER</p></h1>
+        <div class="card">
+        <div class="card-item grey" id ="grey"></div>
+        <div class="card-item green" id="green"></div>
+        <div class="card-item blue" id="blue"></div>
+        <div class="card-item yellow" id="yellow"></div>
+        <div class="card-item white" id="white"></div>
+    </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

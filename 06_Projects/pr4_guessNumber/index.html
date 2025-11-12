@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuessNumber</title>
+    <style>
+        body{
+            background-color: black;
+            color: aqua;
+        }
+        .form , .resultPara{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+            margin: 20px 0px;
+        }
+        #submit,#guessField{
+            padding: 10px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <form class="form">
+        <h1 class="heading">Guess a Number :</h1>
+        <input type="text" id="guessField" class="guessField"> 
+        <input type="submit" id="submit" value="Submit guess" >
+    </form>
+
+    <div class="resultPara">
+        <p>Previous Guess: <span class = "guesses" style="background-color: azure; color: black"></span></p>
+        <p>Guesses remaining: <span class="lastResult">10</span></p>
+        <p class="lowOrHigh"></p>
+        <p>Try of guessing a number btwn 1-100. You have 10 attempts. Best of luck!!</p>
+    </div>
+
+</body>
+<script src="./script.js"></script>
+</html>
